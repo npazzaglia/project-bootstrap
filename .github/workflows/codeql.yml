@@ -1,4 +1,4 @@
-name: "CodeQL"
+name: CodeQL
 
 on:
   push:
@@ -11,7 +11,7 @@ on:
 
 jobs:
   analyze:
-    name: Analyze
+    name: CodeQL / Analyze (python)
     runs-on: ubuntu-latest
     permissions:
       actions: read
