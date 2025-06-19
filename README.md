@@ -1,4 +1,4 @@
-# repo-template
+# project-bootstrap
 
 > 🛠️ A modern, opinionated GitHub template for scaffolding clean, documented, and CI-ready software projects.
 
@@ -30,10 +30,23 @@ This repository serves as a template for creating robust and scalable software p
 
 Clone the repository:
 ```bash
-git clone https://github.com/npazzaglia/repo-template.git
-cd repo-template
+git clone https://github.com/npazzaglia/project-bootstrap.git
+cd project-bootstrap
 make install
 ```
+
+### Post-Fork Setup
+
+After cloning or forking this repository, run the following to configure initial settings:
+
+```bash
+make bootstrap
+```
+
+This will:
+- Validate GitHub CLI auth
+- Set up repo metadata
+- Run project-specific initialization
 
 ### Running the Project
 
@@ -67,8 +80,6 @@ make test
 Pull requests are welcome! For major changes, open an issue first to propose your idea.
 
 Please review [`CONTRIBUTING.md`](CONTRIBUTING.md) and [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) before contributing.
-
-🙌 Want to contribute? See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ---
 
