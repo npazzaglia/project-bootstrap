@@ -1,4 +1,4 @@
-.PHONY: help install lint test format sync clean
+.PHONY: help install lint test format sync clean bootstrap
 
 help:
 	@echo "Available commands:"
@@ -8,6 +8,7 @@ help:
 	@echo "  format     Auto-format code"
 	@echo "  sync       Run template sync script"
 	@echo "  clean      Remove build artifacts and caches"
+	@echo "  bootstrap  Run bootstrap wrapper script"
 
 install:
 	python3 -m venv .venv
@@ -28,3 +29,6 @@ sync:
 
 clean:
 	rm -rf __pycache__ .pytest_cache .venv dist build *.egg-info
+
+bootstrap:
+	bin/bootstrap.sh
