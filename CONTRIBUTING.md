@@ -1,11 +1,11 @@
-# Contributing to Project Name
+# Contributing to repo-template
 
 Thank you for your interest in contributing to this project! We welcome contributions in various forms, including code, documentation, bug reports, and feature suggestions. This document outlines the process for contributing to ensure a smooth collaboration.
 
 ## How to Contribute
 
 ### Reporting Issues
-- **Before reporting an issue**, please search the [issue tracker](https://github.com/username/project-name/issues) to see if the problem has already been reported.
+- **Before reporting an issue**, please search the [issue tracker](https://github.com/npazzaglia/repo-template/issues) to see if the problem has already been reported.
 - Provide a clear and descriptive title.
 - Include a detailed description of the issue, including steps to reproduce it, expected behavior, and screenshots or logs if applicable.
 
@@ -23,15 +23,24 @@ Thank you for your interest in contributing to this project! We welcome contribu
 6. **Open a pull request** against the main branch of the upstream repository.
 7. **Discuss and update** your pull request as needed based on feedback.
 
+> Pull requests should follow the structure in [`.github/pull_request_template.md`](.github/pull_request_template.md).
+
 ### Code Style Guidelines
 - Follow the existing code style and formatting conventions.
 - Write clear and descriptive commit messages.
 - Document your code where necessary and include inline comments for clarity.
+- Use [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) when possible, e.g. `feat: add login handler`.
 
 ### Testing
 - Add or update tests to cover your changes.
 - Run all tests locally before submitting your pull request.
 - Include any additional test instructions if your changes require special setup.
+
+```bash
+make test
+# or, if using pytest:
+pytest tests/
+```
 
 ### Documentation
 - Update documentation to reflect any changes in functionality.
@@ -51,4 +60,4 @@ By contributing, you agree that your contributions will be licensed under the sa
 ## Acknowledgements
 We appreciate your time and effort in helping to improve this project. Your contributions make a significant impact!
 
-Thank you for contributing to Project Name!
+Thank you for contributing to repo-template!

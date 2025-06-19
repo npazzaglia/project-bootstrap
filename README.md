@@ -1,6 +1,6 @@
-# Project Name
+# repo-template
 
-A brief description of your project.
+A general-purpose starter repository for consistent, scalable project scaffolding.
 
 ## Overview
 
@@ -16,50 +16,55 @@ This repository serves as a template for creating robust and scalable software p
 ### Prerequisites
 
 - [Git](https://git-scm.com/)
-- [Node.js](https://nodejs.org/) (or the appropriate runtime for your project)
-- Other dependencies as required by your project
+- [Python 3.11+](https://www.python.org/)
+- [Make](https://www.gnu.org/software/make/) (optional)
 
 ### Installation
 
 Clone the repository:
 ```bash
-git clone https://github.com/username/project-name.git
-cd project-name
+git clone https://github.com/npazzaglia/repo-template.git
+cd repo-template
+make install
 ```
-
-Install dependencies:
-```bash
-npm install
-```
-*(Replace the above commands with those relevant to your project)*
 
 ### Running the Project
 
-Provide instructions on how to run your project. For example:
 ```bash
-npm start
+make run
+# or, if defined, run your app manually:
+# python src/main.py
 ```
 
 ## Running Tests
 
-Explain how to run tests:
 ```bash
-npm test
+make test
 ```
 
-## Contributing
+---
 
-Please refer to [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines on contributing to this project.
+## 📚 Documentation
 
-## License
+- [Getting Started](docs/getting-started.md)
+- [Architecture](docs/architecture.md)
+- [Tech Stack](docs/stack.md)
+- [Operations](docs/operations.md)
+- [Decision Log](docs/decision-log.md)
+- [Changelog](CHANGELOG.md)
 
-This project is licensed under the terms of the [MIT License](LICENSE).
+---
 
-## Code of Conduct
+## 🤝 Contributing
 
-Please see [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) for our community guidelines.
+Pull requests are welcome! For major changes, open an issue first to propose your idea.
 
-## Acknowledgements
+Please review [`CONTRIBUTING.md`](CONTRIBUTING.md) and [`CODE_OF_CONDUCT.md`](CODE_OF_CONDUCT.md) before contributing.
 
-- Special thanks to everyone who contributed to this project.
-- Inspiration from various open-source projects and community guidelines.
+🙌 Want to contribute? See [CONTRIBUTING.md](CONTRIBUTING.md).
+
+---
+
+## 📄 License
+
+MIT License. See [`LICENSE`](LICENSE) for full details.
