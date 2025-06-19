@@ -1,5 +1,12 @@
 # repo-template
 
+> 🛠️ A modern, opinionated GitHub template for scaffolding clean, documented, and CI-ready software projects.
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+[![CI](https://github.com/npazzaglia/project-bootstrap/actions/workflows/ci.yml/badge.svg)](https://github.com/npazzaglia/project-bootstrap/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/npazzaglia/project-bootstrap/actions/workflows/codeql.yml/badge.svg)](https://github.com/npazzaglia/project-bootstrap/actions/workflows/codeql.yml)
+[![GitHub Template](https://img.shields.io/badge/template-enabled-brightgreen)](https://github.com/npazzaglia/project-bootstrap/generate)
+
 A general-purpose starter repository for consistent, scalable project scaffolding.
 
 ## Overview
