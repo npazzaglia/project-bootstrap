@@ -15,6 +15,15 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
+      - name: Check required files
+        run: |
+          for f in README.md LICENSE .github/workflows/ci.yml; do
+            if [ ! -f "$f" ]; then
+              echo "Missing required file: $f"
+              exit 1
+            fi
+          done
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
