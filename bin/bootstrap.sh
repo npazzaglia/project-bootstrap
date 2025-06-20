@@ -25,6 +25,19 @@ echo "📁 Checking post-fork assets..."
 [[ -f bin/post-fork.conf ]] || { echo "❌ Missing bin/post-fork.conf"; exit 1; }
 
 echo "🚀 Running post-fork automation..."
+echo "🛠 Rewriting README badge placeholders..."
+if command -v gh &> /dev/null; then
+  SLUG=$(gh repo view --json nameWithOwner -q .nameWithOwner)
+else
+  SLUG=$(git remote get-url origin | sed -E 's/.*github.com[/:]([^/]+\/[^.]+)(\.git)?/\1/')
+fi
+
+if [[ -n "$SLUG" && "$SLUG" != "unknown/repo" ]]; then
+  sed -i.bak "s|<org>/<repo>|$SLUG|g" README.md && rm README.md.bak
+  echo "✅ Rewrote badges to use: $SLUG"
+else
+  echo "⚠️  Could not detect repo slug. Leaving README badge links unchanged."
+fi
 echo "📜 post-fork.conf contents:"
 cat bin/post-fork.conf
 echo ""
