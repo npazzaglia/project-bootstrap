@@ -1,14 +1,25 @@
-.PHONY: help install lint test format sync clean bootstrap
+.PHONY: bootstrap clean format help install lint post-fork sync test
+
+bootstrap:
+	bin/bootstrap.sh
+
+clean:
+	rm -rf __pycache__ .pytest_cache .venv dist build *.egg-info
+
+format:
+	black . && isort .
 
 help:
 	@echo "Available commands:"
+	@echo "  bootstrap  Run bootstrap wrapper script"
+	@echo "  clean      Remove build artifacts and caches"
+	@echo "  format     Auto-format code"
+	@echo "  help       Show this help message"
 	@echo "  install    Set up local dependencies (e.g., venv, pre-commit)"
 	@echo "  lint       Run all linters"
-	@echo "  test       Run tests"
-	@echo "  format     Auto-format code"
+	@echo "  post-fork  Run post-fork automation"
 	@echo "  sync       Run template sync script"
-	@echo "  clean      Remove build artifacts and caches"
-	@echo "  bootstrap  Run bootstrap wrapper script"
+	@echo "  test       Run tests"
 
 install:
 	python3 -m venv .venv
@@ -18,17 +29,11 @@ install:
 lint:
 	pre-commit run --all-files
 
-test:
-	pytest tests
-
-format:
-	black . && isort .
+post-fork:
+	bin/post-fork.sh
 
 sync:
 	bash bin/sync-template.sh
 
-clean:
-	rm -rf __pycache__ .pytest_cache .venv dist build *.egg-info
-
-bootstrap:
-	bin/bootstrap.sh
+test:
+	pytest tests

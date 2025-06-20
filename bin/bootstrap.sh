@@ -7,7 +7,7 @@ if ! gh auth status &>/dev/null; then
   exit 1
 fi
 
-REPO_INFO=$(gh repo view --json nameWithOwner -q .nameWithOwner || echo "unknown/repo")
+REPO_INFO=$(gh repo view --json nameWithOwner -q .nameWithOwner 2>/dev/null || echo "unknown/repo")
 echo "📦 Repo: $REPO_INFO"
 
 EXPECTED_REPO="pazztech/project-bootstrap"
@@ -25,4 +25,7 @@ echo "📁 Checking post-fork assets..."
 [[ -f bin/post-fork.conf ]] || { echo "❌ Missing bin/post-fork.conf"; exit 1; }
 
 echo "🚀 Running post-fork automation..."
+echo "📜 post-fork.conf contents:"
+cat bin/post-fork.conf
+echo ""
 bash bin/post-fork.sh
