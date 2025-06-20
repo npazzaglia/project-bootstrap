@@ -14,6 +14,15 @@ jobs:
       - name: Check post-fork.sh exists
         run: |
           test -f bin/post-fork.sh && echo "✅ Found post-fork.sh"
+      - name: Check Makefile exists
+        run: |
+          test -f Makefile && echo "✅ Found Makefile"
+      - name: Check README.md exists
+        run: |
+          test -f README.md && echo "✅ Found README.md"
       - name: Check config
         run: |
           grep DEFAULT_VERSION bin/post-fork.conf
+      - name: Check post-fork.conf has ORG_NAME
+        run: |
+          grep ORG_NAME bin/post-fork.conf
