@@ -4,6 +4,16 @@ cd "$(git rev-parse --show-toplevel)"
 
 echo "🔧 Running post-fork setup..."
 
+# Check remotes
+origin_url=$(git remote get-url origin 2>/dev/null || echo "")
+upstream_url=$(git remote get-url upstream 2>/dev/null || echo "")
+
+if [[ -z "$upstream_url" ]]; then
+  echo "⚠️  No upstream remote configured."
+elif [[ "$origin_url" == "$upstream_url" ]]; then
+  echo "⚠️  origin and upstream remotes point to the same URL."
+fi
+
 REPO_NAME=$(basename "$(git rev-parse --show-toplevel)")
 echo "📁 Repo detected: $REPO_NAME"
 sed -i '' "s|<org>/<repo>|npazzaglia/${REPO_NAME}|g" README.md || echo "⚠️ Failed to update README.md"
@@ -26,4 +36,4 @@ else
   echo "🏷️  Tagged initial version as v0.1.0-alpha"
 fi
 
-echo "✅ Post-fork setup complete."
+echo "Post-fork complete"
