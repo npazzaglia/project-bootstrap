@@ -3,8 +3,8 @@ message: "If you use this project, please cite it as below."
 authors:
   - family-names: Pazzaglia
     given-names: Nick
-title: "repo-template"
+title: "project-bootstrap"
 version: "0.1.0-alpha"
 date-released: 2025-06-19
 type: software
-repository-code: "https://github.com/npazzaglia/repo-template"
+repository-code: "https://github.com/npazzaglia/project-bootstrap"
