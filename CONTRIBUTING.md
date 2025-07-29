@@ -1,11 +1,11 @@
-# Contributing to repo-template
+# Contributing to project-bootstrap
 
 Thank you for your interest in contributing to this project! We welcome contributions in various forms, including code, documentation, bug reports, and feature suggestions. This document outlines the process for contributing to ensure a smooth collaboration.
 
 ## How to Contribute
 
 ### Reporting Issues
-- **Before reporting an issue**, please search the [issue tracker](https://github.com/npazzaglia/repo-template/issues) to see if the problem has already been reported.
+- **Before reporting an issue**, please search the [issue tracker](https://github.com/npazzaglia/project-bootstrap/issues) to see if the problem has already been reported.
 - Provide a clear and descriptive title.
 - Include a detailed description of the issue, including steps to reproduce it, expected behavior, and screenshots or logs if applicable.
 
@@ -60,4 +60,4 @@ By contributing, you agree that your contributions will be licensed under the sa
 ## Acknowledgements
 We appreciate your time and effort in helping to improve this project. Your contributions make a significant impact!
 
-Thank you for contributing to repo-template!
+Thank you for contributing to project-bootstrap!

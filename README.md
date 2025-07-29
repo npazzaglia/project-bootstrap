@@ -1,4 +1,4 @@
-# repo-template
+# project-bootstrap
 
 > 🛠️ A modern, opinionated GitHub template for scaffolding clean, documented, and CI-ready software projects.
 
