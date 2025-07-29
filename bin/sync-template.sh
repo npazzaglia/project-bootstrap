@@ -37,7 +37,16 @@ if ! command -v gh &> /dev/null; then
   exit 1
 fi
 
-TEMPLATE_REPO="npazzaglia/repo-template"
+if command -v gh &> /dev/null; then
+  DEFAULT_REPO=$(gh repo view --json nameWithOwner -q .nameWithOwner 2>/dev/null || echo "")
+else
+  DEFAULT_REPO=""
+fi
+TEMPLATE_REPO="${TEMPLATE_REPO:-$DEFAULT_REPO}"
+if [[ -z "$TEMPLATE_REPO" ]]; then
+  log "TEMPLATE_REPO not specified and could not be determined."
+  exit 1
+fi
 TEMPLATE_REMOTE="upstream"
 LOCAL_TMP_DIR="./.tmp-template-sync"
 
@@ -46,7 +55,8 @@ cd "$LOCAL_TMP_DIR"
 
 log "Starting template sync..."
 
-forks=$(gh repo list npazzaglia --fork --json nameWithOwner -q '.[].nameWithOwner')
+TEMPLATE_OWNER="${TEMPLATE_REPO%%/*}"
+forks=$(gh repo list "$TEMPLATE_OWNER" --fork --json nameWithOwner -q '.[].nameWithOwner')
 
 for fork in $forks; do
   log "Processing $fork"
