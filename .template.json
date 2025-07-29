@@ -1,0 +1,7 @@
+{
+  "template_name": "project-bootstrap",
+  "description": "Reusable GitHub project template for devops, infra, and platform repos.",
+  "version": "v1.0.0",
+  "author": "Nick Pazzaglia",
+  "last_updated": "2025-06-30"
+}

@@ -10,12 +10,12 @@ fi
 REPO_INFO=$(gh repo view --json nameWithOwner -q .nameWithOwner 2>/dev/null || echo "unknown/repo")
 echo "📦 Repo: $REPO_INFO"
 
-EXPECTED_REPO="pazztech/project-bootstrap"
+EXPECTED_REPO="${EXPECTED_REPO:-$REPO_INFO}"
 if [[ "$REPO_INFO" != "$EXPECTED_REPO" ]]; then
-  echo "⚠️  WARNING: You are running bootstrap on '$REPO_INFO', expected '$EXPECTED_REPO'"
+  echo "⚠️  WARNING: You are running bootstrap on '$REPO_INFO', expected '$EXPECTED_REPO'" >&2
   read -p "Proceed anyway? [y/N] " -r
   if [[ ! $REPLY =~ ^[Yy]$ ]]; then
-    echo "❌ Aborted by user."
+    echo "❌ Aborted by user." >&2
     exit 1
   fi
 fi

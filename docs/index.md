@@ -4,11 +4,12 @@ Welcome to the documentation hub for this project template. This index links to 
 
 ## 📖 Table of Contents
 
-- [Getting Started](getting-started.md)
+- [Getting Started](docs/getting-started.md)
 - [Architecture Overview](architecture.md)
 - [Tech Stack](stack.md)
 - [Operations](operations.md)
 - [Decision Log](decision-log.md)
+- [GitHub Best Practices](github-best-practices.md)
 - [CHANGELOG](../CHANGELOG.md)
 - [Contributing](../CONTRIBUTING.md)
 - [Code of Conduct](../CODE_OF_CONDUCT.md)

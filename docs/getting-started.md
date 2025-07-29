@@ -39,7 +39,7 @@ docker compose up
 
 ## Environment Variables
 
-Create a `.env` file with the following values:
+Copy `.env.template` to `.env` and populate the following values:
 
 ```env
 EXAMPLE_VAR=value

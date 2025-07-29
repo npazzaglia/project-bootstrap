@@ -51,3 +51,6 @@ build/
 # Shell Scripts and Profiles
 # =====================================================================
 # (No exclusions for .sh or .ps1 files as they are part of the repository)
+
+# Local environment variables
+.env
