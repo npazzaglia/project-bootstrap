@@ -71,6 +71,7 @@ make test
 - [Tech Stack](docs/stack.md)
 - [Operations](docs/operations.md)
 - [Decision Log](docs/decision-log.md)
+- [GitHub Best Practices](docs/github-best-practices.md)
 - [Changelog](CHANGELOG.md)
 
 ---
