@@ -4,7 +4,7 @@
 
 If you discover a security vulnerability, please **do not create a GitHub issue**.
 
-Instead, report it privately by emailing [your-email@example.com].
+Instead, report it privately by emailing [nick@pazztech.com].
 
 We will review your report within 3 business days and take appropriate action as soon as possible.
 
